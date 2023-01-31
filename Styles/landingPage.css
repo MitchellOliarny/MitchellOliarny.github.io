@@ -148,34 +148,28 @@ https://loading.io/asset/630074
   background-color: rgba(0, 0, 0, .75);
 
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-template-rows: 1fr;
   grid-template-areas: 
-    "pTitle pTitle";
+    "pTitle";
 }
 
-.pCard:hover {
+ .pCard:hover {
   
-
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-template-areas: 
-    "pTitle pTitle"
-    "bar bar"
-    "pDescrip pDescrip";
+  transform: scale(1.05);
+  cursor: pointer;
 }
 
 .pTitle {
+  font-size: 5em;
+  text-align: center;
+  margin: auto;
   grid-area: pTitle;
 }
 
-.bar {
-  border-bottom: solid white 2px;
-  grid-area: bar;
-}
-
 .pDescrip {
+  font-size: 2em;
+  visibility: hidden;
   grid-area: pDescrip;
 }
 
