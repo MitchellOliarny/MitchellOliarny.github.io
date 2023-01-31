@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Changa+One&display=swap');
+/*START LANDING PAGE*/
+
+
+/*Loading.IO assets:
+
+https://loading.io/asset/630074
+
+*/
+
+#landing {
+    background-image: linear-gradient(white, lightgrey);
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+}
+
+.landingGrid {
+  background-image: url(../Images/Backgrounds/Wave-16.7s-1920px.svg);
+  background-size: cover;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+        ". . ."
+        "name name ."
+        ". . .";
+}
+
+.name {
+    grid-area: name;
+    font-family: 'Changa One';
+    color: black;
+}
+
+/*END LANDING PAGE*/
+
+
+/*START SKILLS PAGE*/
+
+#skills {
+    background-image: linear-gradient(to top, white, lightgrey);
+    height: 100vh;
+    width: 100%;
+}
+
+.skillsGrid {
+  background-image: url(../Images/Backgrounds/Wave-16.7s-1920px\ \(UpsideDown\).svg);
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: 
+    "skill1 skill2 skill3";
+}
+
+.skill1 {
+  grid-area: skill1;
+}
+
+.skill2 {
+  grid-area: skill2;
+}
+
+.skill3 {
+  grid-area: skill3;
+}
+
+.skillsCard {
+  all: unset;
+  margin: 20% 5% 10% 5%;
+  padding: 10%;
+  height: 50%;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, .75);
+  content: contain;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: 
+    ". skillIcon ."
+    "skillTitle skillTitle skillTitle"
+    "skillDescription skillDescription skillDescription";
+}
+
+.skillIcon {
+  grid-area: skillIcon;
+  height: 300px;
+}
+
+.skillTitle {
+  grid-area: skillTitle;
+  font-size: 3em;
+  color: white;
+  text-align: center;
+}
+
+.skillDescription {
+  grid-area: skillDescription;
+  font-size: 1.5em;
+  color: white;
+  text-align: center;
+}
+
+
+
+/*END SKILLS PAGE*/
+
+
+/*START PORJECTS PAGE*/
+
+#projects {
+    height: 100vh;
+    width: 100%;
+    background-color: lightgray;
+}
+
+.projectsGrid {
+  all: unset;
+  background-size: cover;
+  height: 90%;
+  width: 100%;
+  padding-top: 5%;
+  padding-bottom: 10%;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: 
+    "p1 p2 p3"
+    "p4 p5 p6";
+}
+
+.pCard {
+  all: unset;
+  color: white;
+  text-align: center;
+  margin: 5%;
+  padding: 10%;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, .75);
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: 
+    "pTitle pTitle";
+}
+
+.pCard:hover {
+  
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: 
+    "pTitle pTitle"
+    "bar bar"
+    "pDescrip pDescrip";
+}
+
+.pTitle {
+  grid-area: pTitle;
+}
+
+.bar {
+  border-bottom: solid white 2px;
+  grid-area: bar;
+}
+
+.pDescrip {
+  grid-area: pDescrip;
+}
+
+.p1 {
+  grid-area: p1;
+}
+
+.p2 {
+  grid-area: p2;
+}
+
+.p3 {
+  grid-area: p3;
+}
+
+.p4 {
+  grid-area: p4;
+}
+
+.p5 {
+  grid-area: p5;
+}
+
+.p6 {
+  grid-area: p6;
+}
+
+/*END PROJECTS PAGE*/
+
+/*START CERTIFICATIONS PAGE*/
+
+#certifications {
+  height: 100vh;
+  width: 100%;
+  background-color: lightblue;
+}
+
+/*END CERTIFICATIONS PAGE*/
+
+
+/*ANIMATION*/
+
+.line-1{
+    transition: all .75s ease-in-out;
+    position: relative;
+    top: 30%;  
+    font-size: 7em;
+    width: 16em;
+    margin: 0 auto;
+    border-right: 2px solid rgba(255,255,255,.75);
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.line-2{
+    position: relative;
+    top: 30%;  
+    font-size: 2em;
+    width: 16em;
+    margin: 0 auto;
+    border-right: 2px solid rgba(255,255,255,.75);
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.anim-typewriter{
+    animation: typewriter 4s steps(44) 1s .475 normal both,
+               blinkTextCursor 500ms steps(44) infinite normal;
+  }
+  @keyframes typewriter{
+    from{width: 0;}
+    to{width: 16em;}
+  }
+  @keyframes blinkTextCursor{
+    from{border-right-color: rgba(255,255,255,.75);}
+    to{border-right-color: transparent;}
+  }
+
+  .anim-typewriter2{
+    animation: typewriter2 3s steps(56) 2s 1 normal both,
+               blinkTextCursor2 500ms steps(56) infinite normal;
+  }
+  @keyframes typewriter2{
+    from{width: 0;}
+    to{width: 18em;}
+  }
+  @keyframes blinkTextCursor2{
+    from{border-right-color: rgba(255,255,255,.75);}
+    to{border-right-color: transparent;}
+  }

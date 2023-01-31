@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Changa+One&display=swap');
+
+/*GENERAL CSS*/
+html {
+    scroll-behavior: smooth;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+
+.reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1s all ease;
+  }
+  
+  .reveal.active{
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .hidden {
+    visibility: hidden;
+  }
+
+  .slide {
+    transform: translateX(24.7vw);
+    transition: .75s all ease;
+  }
+
+  .slideBack {
+    transform: translateX(-24.7vw);
+    transition: .75s all ease;
+  }
+
+
+
+
+/*START OF NAVIGATION*/
+
+.navNormal {
+    width: 100%;
+    transition: all .5s ease-in-out;
+    position: fixed;
+    z-index: 1;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 100px;
+    grid-template-areas: 
+        "logo logo skills portfolio cert resume . .";
+}
+
+.navNormal.navScroll { 
+    background-color: white;
+    box-shadow: 0px 3px 5px rgb(16, 108, 213);
+}
+
+.navElement {
+    transform: translateX(0vw);
+    transition: all .5s ease-in-out;
+
+    text-align: center;
+    margin: auto;
+    font-size: 2em;
+    font-family: 'Changa One';
+}
+
+.navElement.scrolled {
+    transform: translateX(24vw);
+    transition: all .5s ease-in-out;
+
+    text-align: center;
+    margin: auto;
+    font-size: 2em;
+    font-family: 'Changa One';
+}
+
+.navElement > a {
+    text-decoration: none;
+}
+
+.inactiveNAV {
+    color: black;
+}
+
+.activeNAV {
+    color:rgb(16, 108, 213);
+}
+
+.activeIMG {
+    filter: invert(28%) sepia(100%) hue-rotate(320deg) saturate(6); 
+}
+
+
+.navElement > a::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color:rgb(16, 108, 213);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.navElement > a:hover::after {
+    transform: scaleX(1);
+  }
+
+.pfp {
+    grid-area: icon;
+    width: 75px;
+    height: 75px;
+    margin: 10px 0px 0px 10px;
+}
+
+.logo {
+    transition: all .75s ease-in-out;
+    margin-top: auto;
+    margin-bottom: auto;
+    grid-area: logo;
+    text-align: center;
+    font-size: 2em;
+    font-family: 'Changa One';
+}
+
+.navPort {
+    grid-area: portfolio;
+}
+
+.navResume {
+    grid-area: resume;
+}
+
+.navSkills {
+    grid-area: skills;
+}
+
+.navCert {
+    grid-area: cert;
+}
+
+.navName {
+    text-decoration: none;
+}
+
+/*END OF NAVIGATION*/
+
+
+
+/*ANIMATION*/
+
+.tracking-in-expand {
+    animation:tracking-in-expand .1s cubic-bezier(.215,.61,.355,1.000) .1s both
+}
+
+@keyframes tracking-in-expand { 
+    0% {
+        letter-spacing:-.5em;
+        opacity:0
+    }
+    40% {
+        opacity:.6
+    }
+    100% {
+        opacity:1
+    }
+
+}
+
+
+
+/*-------------------------------------------------------------------------------------------------------------------------*/
+
+@media screen and (max-width: 719px) {
+
+
+    nav {
+        width: 100%;
+        transition: all .75s ease-in-out;
+        position: fixed;
+        z-index: 1;
+        top: 0px;
+        left: 0px;
+        display: grid;
+        grid-template-columns: 75px 1fr 1fr 1fr 1fr;
+        grid-template-rows: 50px;
+        grid-template-areas: 
+            "icon logo . home about";
+    }
+
+    .pfp {
+        grid-area: icon;
+        width: 50px;
+        height: 50px;
+        margin: auto;
+    }
+
+    .navElement {
+        text-align: center;
+        margin: auto;
+        font-size: 1em;
+        font-family: 'VALORANT', sans-serif;
+    }
+
+    .logo {
+        font-size: 1em;
+    }
+
+    
+}
