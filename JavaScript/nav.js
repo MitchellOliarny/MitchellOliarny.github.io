@@ -3,6 +3,7 @@ addEventListener("load", (event) => {
   let name = document.getElementById("logoSpot");
   let nav = document.getElementById("nav");
   let land = document.getElementById("landing");
+  let about = document.getElementById("about");
   let skill = document.getElementById("skills");
   let port = document.getElementById("projects");
   let cert = document.getElementById("certifications");
@@ -41,7 +42,7 @@ document.addEventListener('scroll', () => {
     }
     }
 
-      if (isInViewport(land)) {
+      if (isInViewport(about)) {
         name.children[0].classList.add("activeNAV");
         name.children[0].classList.remove("inactiveNAV");
       }
