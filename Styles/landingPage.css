@@ -10,6 +10,10 @@ https://loading.io/asset/630074
 
 */
 
+html {
+  scroll-behavior: smooth;
+}
+
 #landing {
     background-image: linear-gradient(white, lightgrey);
     background-size: cover;
