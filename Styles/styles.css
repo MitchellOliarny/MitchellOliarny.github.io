@@ -92,6 +92,7 @@ body {
 
 .activeNAV {
     color:rgb(16, 108, 213);
+    text-decoration: underline;
 }
 
 .activeIMG {

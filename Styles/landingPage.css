@@ -123,6 +123,7 @@ html {
 }
 
 .skillsCard {
+  
   all: unset;
   transition: all ease-in-out .25s;
 
@@ -155,6 +156,8 @@ html {
 
 
 .skillTitle {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-shadow: 1px 2px 2px rgba(0, 0, 0, .75);
   grid-area: skillTitle;
   font-size: 3em;
   color: white;
@@ -182,6 +185,7 @@ html {
 }
 
 .projectsGrid {
+  position: relative;
   box-shadow: inset 0px 0px 50px -24px rgba(0,0,0,0.42);
 
   all: unset;
@@ -199,23 +203,62 @@ html {
     "p4 p5 p6";
 }
 
+
 .pCard {
   all: unset;
-  transition: all ease-in-out .25s;
+  display: block;
+  width: auto;
+  height: auto;
+  margin: 5%;
+}
 
+.flip-card {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: all ease-in-out .75s;
+  transform-style: preserve-3d;
+}
+
+.pCard:hover .flip-card {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  box-shadow: 10px 10px 19px -6px rgba(0,0,0,0.42);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: beige;
   color: white;
   text-align: center;
-  margin: 5%;
-  padding: 10%;
-  box-shadow: 10px 10px 19px -6px rgba(0,0,0,0.42);
-  border-radius: 20px;
+
+}
+
+.flip-card-back {
+  transform: rotateY(180deg);
+
   background-color: rgba(0, 0, 0, .75);
+  color: white;
+  text-align: center;
 
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   grid-template-areas: 
-    "pTitle";
+    "pDescrip uskill"
+    "pDescrip uskill";
+
 }
 
  .pCard:hover {
@@ -227,26 +270,52 @@ html {
 .pTitle {
   font-size: 3.5em;
   text-align: center;
-  margin: auto;
-  grid-area: pTitle;
+  text-shadow: 1px 2px 2px rgba(0, 0, 0, .75);
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-.pDescrip {
-  font-size: 2em;
-  visibility: hidden;
+.flip-card-back .pDescrip {
+  padding: 2%;
+  color: white;
+  font-size: 1.5em;
   grid-area: pDescrip;
 }
+
+.flip-card-back .skills {
+  padding: 2%;
+  color: white;
+  font-size: 1.5em;
+  grid-area: uskill;
+}
+
 
 .p1 {
   grid-area: p1;
 }
 
+.p1 > .flip-card > .flip-card-front {
+  background-image: url(../Images/Pictures/vr.png);
+  background-size: contain;
+}
+
 .p2 {
   grid-area: p2;
+
+}
+
+.p2 > .flip-card > .flip-card-front {
+  background-image: url(../Images/Pictures/valorant.gif);
+  background-size: 150%;
 }
 
 .p3 {
   grid-area: p3;
+
+}
+
+.p3 > .flip-card > .flip-card-front {
+  background-image: url(../Images/Pictures/dragonChamps.jpg);
+  background-size: cover;
 }
 
 .p4 {
