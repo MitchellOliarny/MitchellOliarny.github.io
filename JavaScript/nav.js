@@ -15,7 +15,7 @@ document.addEventListener('scroll', () => {
     if (check)
     {
         name.classList.remove("hidden");
-        name.children[0].children[0].innerHTML = "Mitchell Oliarny";
+        name.children[0].innerHTML = "Mitchell Oliarny";
 
         nav.classList.add("navScroll");
 
@@ -28,7 +28,7 @@ document.addEventListener('scroll', () => {
   }
   else {
     if (!check) {
-      name.children[0].children[0].innerHTML = "";
+      name.children[0].innerHTML = "";
       name.classList.add("hidden");
 
       nav.classList.remove("navScroll");

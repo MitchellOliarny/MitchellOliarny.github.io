@@ -92,7 +92,11 @@ body {
 
 .activeNAV {
     color:rgb(16, 108, 213);
-    text-decoration: underline;
+   
+}
+
+.activeNAV::after {
+    transform: scaleX(1) !important;
 }
 
 .activeIMG {
@@ -149,6 +153,7 @@ body {
 
 .navName {
     text-decoration: none;
+    font-size: 1.5em !important;
 }
 
 /*END OF NAVIGATION*/
