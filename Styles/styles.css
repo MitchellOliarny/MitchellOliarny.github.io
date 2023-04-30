@@ -187,37 +187,52 @@ body {
 @media screen and (max-width: 719px) {
 
 
-    nav {
+    .navNormal {
         width: 100%;
-        transition: all .75s ease-in-out;
+        transition: all .5s ease-in-out;
         position: fixed;
         z-index: 1;
-        top: 0px;
-        left: 0px;
+    
+
+        font-size: .5em;
+
         display: grid;
-        grid-template-columns: 75px 1fr 1fr 1fr 1fr;
-        grid-template-rows: 50px;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 100px;
         grid-template-areas: 
-            "icon logo . home about";
+            "logo logo skills portfolio cert resume . .";
     }
 
     .pfp {
         grid-area: icon;
-        width: 50px;
+        width: 75px;
         height: 50px;
         margin: auto;
     }
 
+
+    .logo {
+        font-size: .75em;
+    }
+
     .navElement {
+        transform: translateX(0vw);
+        transition: all .5s ease-in-out;
+    
+        text-align: center;
+        margin: auto;
+        font-size: 1.5em;
+        font-family: 'Changa One';
+    }
+
+    .navElement.scrolled {
+        transform: translateX(24vw);
+        transition: all .5s ease-in-out;
+    
         text-align: center;
         margin: auto;
         font-size: 1em;
-        font-family: 'VALORANT', sans-serif;
+        font-family: 'Changa One';
     }
-
-    .logo {
-        font-size: 1em;
-    }
-
     
 }
