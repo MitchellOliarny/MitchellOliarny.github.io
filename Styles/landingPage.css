@@ -372,6 +372,41 @@ html {
   display: grid;
 }
 
+footer {
+  background-image: linear-gradient(to top, white, lightgrey);
+  height: 10vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: 
+    "phone email socials";
+}
+
+footer > div {
+  text-align: center;
+    font-family: 'Changa One';
+    margin: auto;
+}
+
+.phone {
+  grid-area: phone;
+}
+
+.email {
+  grid-area: email;
+}
+
+.socials {
+  grid-area: socials;
+  display: inline-block;
+  contain: content;
+}
+
+.socials > a > img {
+  height: 3em;
+}
+
 /*END CERTIFICATIONS PAGE*/
 
 
