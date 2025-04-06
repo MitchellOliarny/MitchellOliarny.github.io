@@ -45,26 +45,42 @@
 <body>
 
     <nav id="nav" class="navNormal tracking-in-expand">
-        <div id="logoSpot" class="logo hidden"><a class="inactiveNAV navName" href="#about"></a></div>
-        <div id="skill" class="navSkills navElement"><a class="inactiveNAV" href="#skills">Skills</a></div>
-        <div id="port" class="navPort navElement"><a class="inactiveNAV" href="#projects">Portfolio</a></div>
-        <div id="cert" class="navCert navElement"><a class="inactiveNAV" href="#certifications">Certifications</a></div>
-        <div id="res" class="navResume navElement"><a class="inactiveNAV" href="https://drive.google.com/file/d/1IyowFT1j572eS4SMsJuVXdMMGAqsAMKl/view?usp=share_link">Resume</a></div>
+        <div id="logoSpot" class="logo"><a class="inactiveNAV navName" href="#about"><img
+                    src="./Images/Icons/LogoWhite.png" /></a></div>
+        <div class="nav-section-2">
+            <!-- <div id="skill" class="navSkills navElement"><a class="inactiveNAV" href="#skills">Skills</a></div> -->
+            <div id="port" class="navPort navElement"><a class="inactiveNAV" href="#projects">Portfolio</a></div>
+            <!-- <div id="cert" class="navCert navElement"><a class="inactiveNAV" href="#certifications">Certifications</a></div> -->
+            <div id="res" class="navResume navElement"><a class="inactiveNAV"
+                    href="https://drive.google.com/file/d/1IyowFT1j572eS4SMsJuVXdMMGAqsAMKl/view?usp=share_link">Resume</a>
+            </div>
+            <div id="res" class="clickablesvg"><a class="" href="https://www.linkedin.com/in/mitchelloliarny/"><img
+                        src="./Images/Icons/linkedin-brands.svg" /></a></div>
+            <div id="res" class="clickablesvg"><a class="" href="https://github.com/MitchellOliarny"><img
+                        src="./Images/Icons/square-github-brands.svg" /></a></div>
+            <div id="res" class="clickablesvg"><a class="" href="mailto:mitchelloliarny@gmail.com"><img
+                        src="./Images/Icons/envelope-solid.svg" /></a></div>
+        </div>
     </nav>
 
     <div id="content">
         <div id="landing">
+            <!-- <img src="./Images/Backgrounds/word-cloud.png" style="position: absolute; width: 50%; height: 50%; margin: auto; left: 4em; opacity: 50%;"> -->
             <div class="landingGrid">
+                <img class="selfPicture" alt="M Oliarny Portrait" src="Images/Pictures/selfPortrait.jpg">
                 <div id="landingName" class="name">
                     <h1 id="name" class="line-1 anim-typewriter">Mitchell Oliarny</h1>
                     <br>
-                    <h2 id="description" class="line-2 anim-typewriter2">Web & Game Developer, UI/UX Designer</h2>
+                    <h2 id="description" class="line-2 anim-typewriter2">Full Stack Web Developer, Entreprenuer</h2>
+                    <br>
+                    <h3 class="line-3">Currently the Chief Technical Officer of both EsportsClubs and RooPunch. Manage
+                        and Collaborate with team members to achieve high quality SaaS products</h3>
                 </div>
 
             </div>
         </div>
 
-        <div id="about">
+        <!-- <div id="about">
             <div class="aboutGrid">
                 <img class="selfPicture" alt="M Oliarny Portrait" src="Images/Pictures/selfPortrait.jpg">
                 <div class="selfDescrip">
@@ -74,10 +90,10 @@
                     </p>
                 </div>
             </div>
-        </div>
-
+        </div> -->
+        <!-- 
         <div id="skills">
-            <div class="skillsGrid">
+             <div class="skillsGrid">
                 <div class="reveal skillsCard skills1">
                     <image class="skillIcon v1" src="Images/Icons/Front-End.gif" alt="Web Icon"></image>
                     <h1 class="skillTitle">Full Stack Development</h1>
@@ -94,21 +110,52 @@
                     <h1 class="skillTitle">Game Development</h1>
                     <p class="skillDescription">Unity, C#, Game Theory, Blender, Maya, Asesprite, Problem Solving </p>
                 </div>
-            </div>
-        </div>
+            </div> 
+        </div> -->
 
         <div id="projects">
-            <div class="projectsGrid">
+
+
+            <div class="project-container">
+                <a class="project-item" href="https://esportsclubs.gg" target="_blank">
+                    <video autoplay muted loop>
+                        <source src="./Video/ESCExport.mp4">
+                    </video>
+                    <div>
+                        <h2>EsportsClubs.gg</h2>
+                        <p>A VALORANT dashboard to view in-game analytics and participate in community driven events</p>
+                        <p>Next.js, Node.js, Tailwind CSS, Typescript, HTML, AWS, MySQL, Restful API</p>
+                    </div>
+                </a>
+                <a class="project-item" href="https://beta.roopunch.com" target="_blank">
+                    <video autoplay muted loop>
+                        <source src="./Video/RooPunchExport.mp4">
+                    </video>
+                    <div>
+                        <h2>RooPunch.com</h2>
+                        <p>A mass referral engine that empowers business owners to maxmize their referral streams</p>
+                        <p>Next.js, Typescript, Tailwind CSS, HTML, AWS, MySQL, Restful API</p>
+                    </div>
+                </a>
+                
+
+            </div>
+
+
+            <!-- <div class="projectsGrid">
                 <div class="reveal pCard p1">
                     <div class="flip-card">
                         <div class="flip-card-front">
                             <h1 class="pTitle">Fulcrom VR</h1>
                         </div>
                         <div class="flip-card-back">
-                            <p class="pDescrip"><span>What it is:</span><br>A VR Hub used by VR Arcades. Fulcrom is meant to be fully customizable and efficient</p>
-                            <p class="idid"><span>My Contribution:</span><br>I produced the Website Control Panel that enables a company to Monitor & Control their VR Stations at mass with ease</p>
-                                <p class="skills"><span>Skills Used:</span><br>HTML, CSS, JavaScript, PHP, MySQL, Databasing</p>
-                                <a class="link" href="#" target="_blank">Click to Visit</a>
+                            <p class="pDescrip"><span>What it is:</span><br>A VR Hub used by VR Arcades. Fulcrom is
+                                meant to be fully customizable and efficient</p>
+                            <p class="idid"><span>My Contribution:</span><br>I produced the Website Control Panel that
+                                enables a company to Monitor & Control their VR Stations at mass with ease</p>
+                            <p class="skills"><span>Skills Used:</span><br>HTML, CSS, JavaScript, PHP, MySQL, Databasing
+                            </p>
+                            <a class="link" href="#" target="_blank">Click to Visit</a>
                         </div>
                     </div>
                 </div>
@@ -118,10 +165,13 @@
                             <h1 class="pTitle">ESC Online Service</h1>
                         </div>
                         <div class="flip-card-back">
-                            <p class="pDescrip"><span>What it is:</span><br>An online, advanced Coaching Service for the game: Valorant</p>
-                            <p class="idid"><span>My Contribution:</span><br>I produced all Front & Back-End for the website</p>
-                                <p class="skills"><span>Skills Used:</span><br>HTML, CSS, JavaScript, Node.js, D3.js, MySQL, Databasing</p>
-                                <a class="link" href="#" target="_blank">Click to Visit</a>
+                            <p class="pDescrip"><span>What it is:</span><br>An online, advanced Coaching Service for the
+                                game: Valorant</p>
+                            <p class="idid"><span>My Contribution:</span><br>I produced all Front & Back-End for the
+                                website</p>
+                            <p class="skills"><span>Skills Used:</span><br>HTML, CSS, JavaScript, Node.js, D3.js, MySQL,
+                                Databasing</p>
+                            <a class="link" href="#" target="_blank">Click to Visit</a>
                         </div>
                     </div>
 
@@ -132,58 +182,26 @@
                             <h1 class="pTitle">Teacher Fighter Game</h1>
                         </div>
                         <div class="flip-card-back">
-                            <p class="pDescrip"><span>What it is:</span><br>A local-multiplayer Smash Bros. Style fighter game with our Highschool Teachers</p>
-                            <p class="idid"><span>My Contribution:</span><br>I produced teacher sprites, animations, menus, and the UI</p>
-                                <p class="skills"><span>Skills Used:</span><br>Unity, C#, UI/UX, Adobe Photoshop & Illustrator, Aesprite</p>
-                                <a class="link" href="https://disgracedm8.itch.io/dragonchamps" target="_blank">Click to Visit</a>
+                            <p class="pDescrip"><span>What it is:</span><br>A local-multiplayer Smash Bros. Style
+                                fighter game with our Highschool Teachers</p>
+                            <p class="idid"><span>My Contribution:</span><br>I produced teacher sprites, animations,
+                                menus, and the UI</p>
+                            <p class="skills"><span>Skills Used:</span><br>Unity, C#, UI/UX, Adobe Photoshop &
+                                Illustrator, Aesprite</p>
+                            <a class="link" href="https://disgracedm8.itch.io/dragonchamps" target="_blank">Click to
+                                Visit</a>
                         </div>
                     </div>
 
                 </div>
-              
-            </div>
-        </div>
 
+            </div> -->
+        </div>
+        <!-- 
         <div id="certifications">
-            <a target="_blank" href="https://drive.google.com/file/d/19bqdHscegYg2mIVoIVCFwiUI_GRIdv9l/view?usp=share_link">  <div class="certCard">
-                HTML5 Application Development Fundamentals
-            </div></a>
-          
-            <a target="_blank" href="https://drive.google.com/file/d/10wRxrqrpfMXRhoDn0gB0VEbf03ziwPKN/view?usp=share_link">
-                <div class="certCard">
-                    Introduction to Programming using HTML and CSS
-                </div>
-            </a>
-            <a target="_blank" href="https://drive.google.com/file/d/1Mq6KC99nfBCtDFtnWMu2F-fid_Hlldo4/view?usp=share_link">
-                <div class="certCard">
-                    Visual Design using Adobe Photoshop CC 2018
-                </div>
-            </a>
-            <a target="_blank" href="https://drive.google.com/file/d/1jzbkM4Pf1E2KVViRBLLKYiBj29NXer1y/view?usp=share_link">
-                <div class="certCard">
-                    Graphic Design & Illustration using Adobe Illustrator CC 2018
-                </div>
-            </a>
-            <a target="_blank" href="https://drive.google.com/file/d/1sRFHVxa1a3l6xcA9ekRhPavrrsk69UXL/view?usp=share_link">
-                <div class="certCard">
-                    Microsoft Word Expert (Office 2019)
-                </div>
-            </a>
-            <a target="_blank" href="https://drive.google.com/file/d/1xEEPTra4-m2u3lYFmwFExMLry9fTQMmA/view?usp=share_link">
-                <div class="certCard">
-                    Microsoft Excel (Office 2019)
-                </div>
-            </a>
-        </div>
-
-        <footer>
-            <div class="phone">Phone: <br> 208 972-6017</div>
-            <div class="email">Email: <br> mitchelloliarny@gmail.com</div>
-            <div class="socials">
-                <a href="https://www.linkedin.com/in/mitchelloliarny"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png"></a>
-                <a href="https://github.com/MitchellOliarny"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png"></a>
+            <div>
             </div>
-        </footer>
+        </div> -->
     </div>
 
 

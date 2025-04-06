@@ -12,6 +12,23 @@ body {
     overflow-x: hidden;
 }
 
+.clickablesvg {
+    cursor: pointer;
+    color: white;
+    width: auto;
+    height: 40%;
+    margin: auto;
+}
+
+.clickablesvg > * > *{
+    cursor: pointer;
+    color: white;
+    width: auto;
+    height: 100%;
+    margin: auto;
+    filter: invert(1);
+}
+
 
 .reveal{
     position: relative;
@@ -49,12 +66,20 @@ body {
     transition: all .5s ease-in-out;
     position: fixed;
     z-index: 1;
+    height: 75px;
+    font-size: .75em;
+    justify-content: space-around;
+    display: flex;
+    flex-direction: row;
+    background-color: #141414;
+    color: white;
+    padding: 0 10%;
+}
 
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 100px;
-    grid-template-areas: 
-        "logo logo skills portfolio cert resume . .";
+.nav-section-2 {
+    display: flex;
+    flex-direction: row;
+    gap: 4em;
 }
 
 .navNormal.navScroll { 
@@ -65,7 +90,7 @@ body {
 .navElement {
     transform: translateX(0vw);
     transition: all .5s ease-in-out;
-
+    color: white;
     text-align: center;
     margin: auto;
     font-size: 2em;
@@ -75,7 +100,6 @@ body {
 .navElement.scrolled {
     transform: translateX(24vw);
     transition: all .5s ease-in-out;
-
     text-align: center;
     margin: auto;
     font-size: 2em;
@@ -87,7 +111,7 @@ body {
 }
 
 .inactiveNAV {
-    color: black;
+    color: white;
 }
 
 .activeNAV {
@@ -127,12 +151,23 @@ body {
 
 .logo {
     transition: all .75s ease-in-out;
-    margin-top: auto;
-    margin-bottom: auto;
+    margin: auto 0;
     grid-area: logo;
-    text-align: center;
-    font-size: 2em;
-    font-family: 'Changa One';
+    height: 100%;
+    width: auto;
+    display: flex;
+}
+
+.logo > a {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.logo > a > img {
+    height: 60%;
+    margin: auto;
+    width: auto;
 }
 
 .navPort {
@@ -187,7 +222,7 @@ body {
 @media screen and (max-width: 719px) {
 
 
-    .navNormal {
+     /* .navNormal {
         width: 100%;
         transition: all .5s ease-in-out;
         position: fixed;
@@ -208,23 +243,25 @@ body {
         width: 75px;
         height: 50px;
         margin: auto;
-    }
+    } */
+
+
 
 
     .logo {
-        font-size: .75em;
-    }
+        height: 50%;
+    } 
 
-    .navElement {
+     .navElement {
         transform: translateX(0vw);
         transition: all .5s ease-in-out;
     
         text-align: center;
         margin: auto;
-        font-size: 1.5em;
+        font-size: .75em;
         font-family: 'Changa One';
     }
-
+    /*
     .navElement.scrolled {
         transform: translateX(24vw);
         transition: all .5s ease-in-out;
@@ -234,5 +271,5 @@ body {
         font-size: 1em;
         font-family: 'Changa One';
     }
-    
+     */
 }

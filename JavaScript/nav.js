@@ -11,37 +11,7 @@ addEventListener("load", (event) => {
 
 
 document.addEventListener('scroll', () => {
-  if (window.scrollY >= 400) {
-    if (check)
-    {
-        name.classList.remove("hidden");
-        name.children[0].innerHTML = "Mitchell Oliarny";
-
-        nav.classList.add("navScroll");
-
-        for (let i = 1; i < nav.children.length; i++) {
-          nav.children[i].classList.add("scrolled");
-        }
-
-        check = false;
-    }
-  }
-  else {
-    if (!check) {
-      name.children[0].innerHTML = "";
-      name.classList.add("hidden");
-
-      nav.classList.remove("navScroll");
-
-      for (let i = 1; i < nav.children.length; i++) {
-        nav.children[i].classList.remove("scrolled");
-      }
-
-      check = true;
-      
-    }
-    }
-
+ 
       if (isInViewport(about)) {
         name.children[0].classList.add("activeNAV");
         name.children[0].classList.remove("inactiveNAV");

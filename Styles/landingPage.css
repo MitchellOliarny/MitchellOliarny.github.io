@@ -14,33 +14,91 @@ html {
   scroll-behavior: smooth;
 }
 
+.project-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 5%;
+}
+
+
+.project-item {
+  transition: .25s ease-in-out;
+  height: 35em;
+  width: 45em;
+  background-color: white;
+  border-radius: 0.5em;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 2fr 1fr;
+  contain: content;
+  text-decoration: none !important;
+}
+
+.project-item:hover {
+  transform: scale(1.05);
+}
+
+.project-item > * {
+  width: 100%;
+  height: 100%;
+  text-decoration: none !important;
+}
+
+.project-item > div {
+  padding: 2%;
+}
+
+.project-item > div > h2{
+  text-decoration: none;
+  font-size: 1.25em;
+  font-weight: bold;
+  color: rgb(92, 92, 92) !important;
+}
+
+.project-item > div > p{
+  text-decoration: none;
+  font-size: 1em;
+  font-weight: 400;
+  color: rgb(134, 134, 134) !important;
+}
+
 #landing {
-    background-image: linear-gradient(white, lightgrey);
+    background-image: linear-gradient(rgb(236, 236, 236), rgb(238, 238, 238));
     background-size: cover;
-    height: 100vh;
+    height: 80vh;
     width: 100%;
+    display: flex;
+    position: relative;
 }
 
 .landingGrid {
-  background-image: url(../Images/Backgrounds/Wave-16.7s-1920px.svg);
-  background-size: cover;
+  /* background-image: url(../Images/Backgrounds/Wave-16.7s-1920px.svg);
+  background-size: cover; */
 
     width: 100%;
     height: 100%;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
 
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas:
-        ". . ."
-        "name name ."
-        ". . .";
+.landingGrid > img {
+  height: 50%;
+  width: auto;
 }
 
 .name {
+  text-align: left;
+    width: 50%;
     grid-area: name;
     font-family: 'Changa One';
     color: black;
+    margin: auto;
 }
 
 /*END LANDING PAGE*/
@@ -181,7 +239,7 @@ html {
 #projects {
     height: 100vh;
     width: 100%;
-    background-color: lightgray;
+    background-color: rgb(24, 24, 24);
 }
 
 .projectsGrid {
@@ -190,7 +248,7 @@ html {
 
   all: unset;
   background-size: cover;
-  height: 90%;
+  height: 100%;
   width: 100%;
   padding-top: 5%;
   padding-bottom: 10%;
@@ -359,83 +417,17 @@ html {
 /*START CERTIFICATIONS PAGE*/
 
 #certifications {
-    all: unset;
-  background-size: cover;
   height: 100vh;
-  width: 100vw;
-  padding-top: 5%;
-
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  grid-template-areas: 
-    ". . ."
-    ". . .";
+  width: 100%;
   background-color: lightblue;
 }
 
-#certifications > a {
-  text-decoration: none;
-}
+.certGrid {
+  box-shadow: inset 0px 0px 50px -24px rgba(0,0,0,0.42);
+  width: 100%;
+  height: 100%;
 
-.certCard {
-  all: unset;
-  display: block;
-  width: auto;
-  height: 15vh;
-    transition: all ease-in-out .25s;
-
-  margin: 10% 10% 0% 10%;
-  padding: 10%;
-  box-shadow: 10px 10px 19px -6px rgba(0,0,0,0.42);
-  border-radius: 20px;
-  background-color: rgba(0, 0, 0, .75);
-  content: contain;
-    color: white;
-  text-align: center;
-    font-family: 'Changa One';
-  font-size: 2em;
-}
-
-.certCard:hover {
-  transform: scale(1.1);
-  cursor: pointer;
-}
-
-
-footer {
-  background-image: linear-gradient(to top, white, lightgrey);
-  height: 10vh;
-  width: 100vw;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
-  grid-template-areas: 
-    "phone email socials";
-}
-
-footer > div {
-  text-align: center;
-    font-family: 'Changa One';
-    margin: auto;
-}
-
-.phone {
-  grid-area: phone;
-}
-
-.email {
-  grid-area: email;
-}
-
-.socials {
-  grid-area: socials;
-  display: inline-block;
-  contain: content;
-}
-
-.socials > a > img {
-  height: 3em;
 }
 
 /*END CERTIFICATIONS PAGE*/
@@ -468,6 +460,17 @@ footer > div {
     overflow: hidden;
 }
 
+.line-3{
+  position: relative;
+  top: 30%;  
+  font-size: 1.25em;
+  font-weight: 400;
+  width: 80%;
+  margin: 0 auto;
+  /* border-right: 2px solid rgba(255,255,255,.75); */
+  text-align: center;
+}
+
 .anim-typewriter{
     animation: typewriter 4s steps(44) 1s .475 normal both,
                blinkTextCursor 500ms steps(44) infinite normal;
@@ -498,65 +501,36 @@ footer > div {
 
   @media screen and (max-width: 719px) {
 
-    #certifications {
-      all: unset;
-    background-size: cover;
-    height: 100vh;
-    width: 100vw;
-    padding-top: 5%;
-  
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas: 
-      ". ."
-      ". ."
-      ". .";
-    background-color: lightblue;
-  }
-
-  footer > div {
-    text-align: center;
-      font-family: 'Changa One';
-      margin: auto;
-      font-size: .75em;
-  }
-
-  .certCard {
-    all: unset;
-    display: block;
-    width: auto;
-    height: 15vh;
-      transition: all ease-in-out .25s;
-  
-    margin: 10% 10% 0% 10%;
-    padding: 10%;
-    box-shadow: 10px 10px 19px -6px rgba(0,0,0,0.42);
-    border-radius: 20px;
-    background-color: rgba(0, 0, 0, .75);
-    content: contain;
-      color: white;
-    text-align: center;
-      font-family: 'Changa One';
-    font-size: 1em;
-  }
-
-  .socials > a > img {
-    height: 2em;
-  }
+    .landingGrid {
+      /* background-image: url(../Images/Backgrounds/Wave-16.7s-1920px.svg);
+      background-size: cover; */
+    
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-content: center;
+        display: flex;
+        flex-direction: column-reverse;
+        flex-wrap: wrap;
+        gap: 0em;
+    }
+    
 
     #landing {
       background-image: linear-gradient(white, lightgrey);
       background-size: cover;
-      height: 25vh;
+      height: 75vh;
       width: 100%;
   }
 
     .name {
-      font-size: .25em;
+      width: 100%;
+      text-align: center;
+      font-size: .5em;
       grid-area: name;
       font-family: 'Changa One';
       color: black;
+      margin-bottom: none;
   }
 
   #about {
@@ -587,7 +561,8 @@ footer > div {
     border-radius: 20px;
     box-shadow: 10px 10px 19px -6px rgba(0,0,0,0.42);
   
-    width: 50%;
+    width: 33% !important;
+    height: auto !important;
   }
   
   
@@ -602,7 +577,7 @@ footer > div {
   }
 
   .skillsGrid {
-    background-color: bisque;
+    /* background-color: bisque; */
     box-shadow: inset 0px 0px 50px -24px rgba(0,0,0,0.42);
   
     height: 100%;
@@ -616,7 +591,7 @@ footer > div {
 
 
   #skills {
-    background-image: linear-gradient(to top, white, lightgrey);
+    background-image: linear-gradient(to top, rgb(32, 32, 32), rgb(44, 44, 44));
     height: auto;
     width: 100%;
 }
