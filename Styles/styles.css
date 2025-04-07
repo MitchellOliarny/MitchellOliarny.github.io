@@ -222,22 +222,10 @@ body {
 @media screen and (max-width: 719px) {
 
 
-     /* .navNormal {
-        width: 100%;
-        transition: all .5s ease-in-out;
-        position: fixed;
-        z-index: 1;
-    
-
-        font-size: .5em;
-
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-        grid-template-rows: 100px;
-        grid-template-areas: 
-            "logo logo skills portfolio cert resume . .";
+     .navNormal {
+        padding: 0;
     }
-
+    /*
     .pfp {
         grid-area: icon;
         width: 75px;
@@ -245,7 +233,11 @@ body {
         margin: auto;
     } */
 
-
+    .nav-section-2 {
+        display: flex;
+        flex-direction: row;
+        gap: 1.5em;
+    }
 
 
     .logo {
@@ -258,7 +250,7 @@ body {
     
         text-align: center;
         margin: auto;
-        font-size: .75em;
+        font-size: 1.5em;
         font-family: 'Changa One';
     }
     /*

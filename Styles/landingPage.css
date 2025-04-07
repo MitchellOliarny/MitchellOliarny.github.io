@@ -35,13 +35,13 @@ html {
 
 .project-item {
   transition: .25s ease-in-out;
-  height: 35em;
+  height: auto;
   width: 45em;
   background-color: white;
   border-radius: 0.5em;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 2fr 1fr;
+  grid-template-rows: auto auto;
   contain: content;
   text-decoration: none !important;
 }
@@ -86,7 +86,7 @@ html {
 .landingGrid {
   /* background-image: url(../Images/Backgrounds/Wave-16.7s-1920px.svg);
   background-size: cover; */
-
+    text-align: left !important;
     width: 100%;
     height: 100%;
     justify-content: center;
@@ -136,7 +136,7 @@ html {
 .selfPicture {
   transition: all ease-in-out .25s;
   grid-area: selfPicture;
-  margin: auto;
+  margin: auto 0 auto auto;
   border-radius: 20px;
   box-shadow: 10px 10px 19px -6px rgba(0,0,0,0.42);
 
@@ -146,7 +146,7 @@ html {
 
 .selfDescrip {
   grid-area: selfDescrip;
-  margin: auto;
+  margin: auto; 
 
   color: black;
   font-weight: 300;
@@ -459,6 +459,7 @@ html {
 }
 
 .line-2{
+    color: rgb(56, 56, 56);
     position: relative;
     top: 30%;  
     font-size: 2em;
@@ -495,7 +496,7 @@ html {
   }
 
   .anim-typewriter2{
-    animation: typewriter2 3s steps(56) 2s 1 normal both,
+    animation: typewriter2 3s steps(56) 1s 1 normal both,
                blinkTextCursor2 500ms steps(56) infinite normal;
   }
   @keyframes typewriter2{
@@ -510,6 +511,12 @@ html {
 
 
   @media screen and (max-width: 719px) {
+
+    body {
+      max-width: 100vw;
+      contain: content;
+      overflow: hidden;
+    }
 
     .landingGrid {
       /* background-image: url(../Images/Backgrounds/Wave-16.7s-1920px.svg);
@@ -529,18 +536,28 @@ html {
     #landing {
       background-image: linear-gradient(white, lightgrey);
       background-size: cover;
-      height: 75vh;
+      height: 60vh;
       width: 100%;
   }
 
     .name {
       width: 100%;
       text-align: center;
-      font-size: .5em;
+      font-size: .4em;
       grid-area: name;
       font-family: 'Changa One';
       color: black;
       margin-bottom: none;
+      margin-top: 20%;
+  }
+
+  .description {
+    font-size: 2em;
+  }
+
+  .line-3 {
+    font-size: 2em;
+    margin-top: .5em;
   }
 
   #about {
@@ -605,11 +622,12 @@ html {
     height: auto;
     width: 100%;
 }
-
 #projects {
-  height: 100vh;
+  display: flex;
+   flex-direction: column;
+  height: auto;
   width: 100%;
-  background-color: lightgray;
+  background-color: rgb(24, 24, 24);
 }
 
 .projectsGrid {
